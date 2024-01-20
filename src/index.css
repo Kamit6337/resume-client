@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply font-sans overflow-x-hidden;
+  }
+
+  button {
+    @apply border-none outline-none;
+  }
+}
+
+@layer utilities {
+  .text_para {
+    @apply text-xs tablet:text-[10px]  tracking-wide tablet:tracking-wider text-para leading-5 tablet:leading-4;
+  }
+
+  .section_header {
+    @apply text-4xl tablet:text-3xl mobile:text-2xl font-extrabold tracking-wide;
+  }
+
+  .section_header_title {
+    @apply text-5xl tablet:text-3xl mobile:text-2xl font-black tracking-wide;
+  }
+
+  .portfolio_title {
+    @apply text-3xl tablet:text-2xl font-semibold tracking-wide text-my_bg;
+  }
+
+  .portfolio_category {
+    @apply text-xs text-gray-500;
+  }
+}

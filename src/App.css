@@ -1,0 +1,82 @@
+.gradient_link {
+  background: rgb(132, 144, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(132, 144, 255, 1) 0%,
+    rgba(98, 189, 252, 1) 100%
+  );
+  /* background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%); */
+}
+
+.gradient_link_hover {
+  background: rgb(132, 144, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(132, 144, 255, 0.85) 0%,
+    rgba(98, 189, 252, 0.85) 100%
+  );
+  /* background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%); */
+}
+
+.gradient_link_shadow {
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(132, 144, 255, 1);
+  -moz-box-shadow: 0px 0px 20px 2px rgba(132, 144, 255, 1);
+  box-shadow: 0px 0px 20px 2px rgba(132, 144, 255, 1);
+}
+
+.qualification_icon_shadow {
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(132, 144, 255, 0.5);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(132, 144, 255, 0.5);
+  box-shadow: 0px 0px 10px 2px rgba(132, 144, 255, 0.5);
+}
+
+/* #root {
+  width: 100vw;
+  height: auto;
+  color: black;
+} */
+
+/* NOTE: CUSTOMISE SCROLL BAR */
+/* WORK: CHANGE WIDTH OF SCROLL BAR */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+*::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+/* WORK: CHANGE BACKGROUND COLOR OF TRACK */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+*::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+/* WORK: CHANGE COLOR OF SCROLLBAR */
+::-webkit-scrollbar-thumb {
+  background: hsl(0, 3%, 75%); /* Thumb color */
+  border-radius: 6px; /* Roundness of the thumb */
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: hsl(0, 3%, 75%); /* Thumb color */
+  border-radius: 16px; /* Roundness of the thumb */
+}
+/* WORK: CHANGE COLOR OF SCROLLBAR ON HOVER */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb color on hover */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 2%, 39%, 0.63); /* Thumb color on hover */
+}
+
+* {
+  -ms-overflow-style: none; /* Hide the default scrollbar */
+}
