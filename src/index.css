@@ -30,6 +30,9 @@
   .section_header_title {
     @apply text-5xl tablet:text-3xl mobile:text-2xl font-black tracking-wide;
   }
+  .section_para {
+    @apply text-sm text-gray-400 w-2/3 mobile:w-full text-center;
+  }
 
   .portfolio_title {
     @apply text-3xl tablet:text-2xl font-semibold tracking-wide text-my_bg;
@@ -37,5 +40,25 @@
 
   .portfolio_category {
     @apply text-xs text-gray-500;
+  }
+
+  .service_icon {
+    @apply text-5xl mobile:text-4xl mr-4 mobile:mr-2;
+  }
+
+  .service_title {
+    @apply text-lg mobile:text-[14px] font-medium uppercase tracking-wide;
+  }
+
+  .service_point {
+    @apply mobile:text-xs font-thin text-gray-500 tracking-wide;
+  }
+
+  .service_option {
+    @apply w-1/2   py-2 font-semibold tracking-wider cursor-pointer text-center hover:bg-my_hover_header hover:text-hover_link;
+  }
+
+  .mern_stack_option {
+    @apply w-40 py-2 font-semibold tracking-wider cursor-pointer text-center  hover:text-hover_link hover:border hover:border-hover_link rounded-lg;
   }
 }

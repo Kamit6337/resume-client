@@ -12,14 +12,10 @@ const BackendTechInfo = () => {
             className="border border-gray-400 rounded-lg p-6 tablet:p-3 mobile:p-2 mb-6"
           >
             <div className="flex items-center mb-2">
-              <div className="text-5xl mobile:text-4xl mr-4 mobile:mr-2">
-                {icon}
-              </div>
-              <p className=" text-lg mobile:text-[14px] font-medium uppercase tracking-wide">
-                {title}
-              </p>
+              <div className="service_icon">{icon}</div>
+              <p className="service_title">{title}</p>
             </div>
-            <ul className="list-disc px-10 mobile:px-8 mobile:text-xs font-thin text-gray-500 tracking-wide">
+            <ul className="list-disc px-10 mobile:px-8 service_point ">
               {points.map((point, i) => {
                 return (
                   <li key={i} className="mobile:mb-2">

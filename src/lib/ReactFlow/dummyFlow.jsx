@@ -40,6 +40,7 @@ const targetDiv = (id, target, xCoor, height) => {
 const ReactFlowChartDummy = ({ source, targets, icon }) => {
   const [xCoor, setXCoor] = useState(null);
   const [initialNode, setInitialNode] = useState([]);
+  const [initialEdge, setInitialEdge] = useState([]);
   const [height, setHeight] = useState(220);
 
   const handleWindowWidth = useCallback(() => {
@@ -58,6 +59,7 @@ const ReactFlowChartDummy = ({ source, targets, icon }) => {
       setHeight(110 * targets.length);
     } else {
       setXCoor(window.outerWidth / 3);
+      setHeight(130 * targets.length);
     }
 
     const targetNodes = targets.map((target, i, arr) => {
@@ -67,12 +69,29 @@ const ReactFlowChartDummy = ({ source, targets, icon }) => {
         targetHeight = targetHeight / 2;
       }
 
-      if (arr.length >= 2) {
-        targetHeight = i * (targetHeight / (arr.length - 1));
+      if (arr.length === 2) {
+        targetHeight = i * targetHeight;
+      }
+
+      if (arr.length >= 3) {
+        targetHeight = i * (targetHeight / (arr.length - 1 - 0.4));
       }
 
       return targetDiv(i + 2, target, xCoor, targetHeight);
     });
+
+    const edges = targets.map((target, i) => {
+      // { id: "e1-2", source: "1", target: "2" },
+
+      const obj = {
+        id: `e1-${i + 2}`,
+        source: "1",
+        target: `${i + 2}`,
+      };
+      return obj;
+    });
+
+    setInitialEdge(edges);
 
     setInitialNode([sourceDiv(icon, source, height), ...targetNodes]);
 
@@ -147,10 +166,7 @@ const ReactFlowChartDummy = ({ source, targets, icon }) => {
       <div style={{ width: "100%", height: "100%", padding: "0px" }}>
         <ReactFlow
           nodes={initialNode}
-          edges={[
-            { id: "e1-2", source: "1", target: "2" },
-            { id: "e1-3", source: "1", target: "3" },
-          ]}
+          edges={initialEdge}
           panOnDrag={false}
           zoomOnScroll={false}
           zoomOnPinch={false}

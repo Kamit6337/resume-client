@@ -1,46 +1,67 @@
 import { useState } from "react";
-import FrontendReactFlow from "../../../components/FrontendReactFlow";
+import ReactFlowComponent from "../../../components/ReactFlowComponent";
 import BackendTechInfo from "../../../components/BackendTechInfo";
+import frontendData from "../../../data/MERN_Stack/frontendData";
 
 const Service = () => {
   const [showBackend, setShowBackend] = useState(false);
+  const [showNextJS, setShowNextJS] = useState(false);
 
   return (
     <section className="">
       <p className="section_header text-center">My Offered Services</p>
-      <p className="uppercase mt-20 mb-10 mobile:mt-12 mobile:mb-6 text-center">
-        Full Stack web development
-      </p>
-      <main className="w-full">
-        <header className="w-full flex uppercase text-xl mobile:text-lg">
-          <p
-            className={`${
-              !showBackend && "border-b border-hover_link text-hover_link"
-            }  w-1/2   py-2 font-semibold tracking-wider cursor-pointer text-center hover:bg-my_hover_header hover:text-hover_link`}
-            onClick={() => setShowBackend(false)}
-          >
-            Frontend
-          </p>
-          <p
-            className={`${
-              showBackend && "border-b border-hover_link text-hover_link"
-            }  w-1/2   py-2 font-semibold tracking-wider cursor-pointer  text-center hover:bg-my_hover_header hover:text-hover_link`}
-            onClick={() => setShowBackend(true)}
-          >
-            Backend
-          </p>
-        </header>
 
-        {!showBackend ? (
-          <div className="w-full h-full px-10 sm_lap:px-0 ">
-            <FrontendReactFlow />
+      <header className="w-full flex uppercase text-xl mobile:text-lg mt-20 mb-10 mobile:mt-12 mobile:mb-6">
+        <p
+          className={`${
+            !showNextJS && "border-b border-hover_link text-hover_link"
+          }  service_option`}
+          onClick={() => setShowNextJS(false)}
+        >
+          MERN Stack
+        </p>
+        <p
+          className={`${
+            showNextJS && "border-b border-hover_link text-hover_link"
+          }  service_option`}
+          onClick={() => setShowNextJS(true)}
+        >
+          Next JS
+        </p>
+      </header>
+
+      {!showNextJS && (
+        <>
+          <div className="flex uppercase justify-center gap-2 my-10">
+            <p
+              className={`${
+                !showBackend && "border border-hover_link text-hover_link"
+              } mern_stack_option`}
+              onClick={() => setShowBackend(false)}
+            >
+              Frontend
+            </p>
+            <p
+              className={`${
+                showBackend && "border border-hover_link text-hover_link"
+              } mern_stack_option`}
+              onClick={() => setShowBackend(true)}
+            >
+              Backend
+            </p>
           </div>
-        ) : (
-          <div className="w-full h-full mt-16 px-20 sm_lap:mt-12 mobile:mt-6 tablet:px-10 mobile:px-4    ">
-            <BackendTechInfo />
-          </div>
-        )}
-      </main>
+
+          {!showBackend ? (
+            <div className="w-full h-full px-10 sm_lap:px-0 ">
+              <ReactFlowComponent data={frontendData} />
+            </div>
+          ) : (
+            <div className="w-full h-full  px-20 sm_lap:mt-12 mobile:mt-6 tablet:px-10 mobile:px-4">
+              <BackendTechInfo />
+            </div>
+          )}
+        </>
+      )}
     </section>
   );
 };

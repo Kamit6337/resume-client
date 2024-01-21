@@ -66,7 +66,7 @@ const LatestPortfolio = () => {
               </div>
             </div>
             {!lastDiv && (
-              <div className="w-32 h-[2px] bg-gray-300 rounded-xl mx-auto my-32" />
+              <div className="w-32 mobile:w-16 h-[2px] bg-gray-300 rounded-xl mx-auto my-32" />
             )}
           </>
         );

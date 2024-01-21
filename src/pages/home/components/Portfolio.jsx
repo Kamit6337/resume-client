@@ -37,7 +37,7 @@ const Portfolio = () => {
         <p className="section_header capitalize text-center ">
           My Latest Featured Portfolio
         </p>
-        <p className="text-sm text-gray-400 w-2/3 mobile:w-full text-center">
+        <p className="section_para">
           Projects cover MERN Stack with Next JS, both are popular framework for
           making industry level, well developed and scalable Full-Stack Web Apps
         </p>
