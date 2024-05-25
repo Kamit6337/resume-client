@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Header from "../../components/Header";
-import MERNStackServices from "./mernStackServices";
+import MERNStackServices from "./MERNStackServices";
 
 const Services = () => {
   useEffect(() => {
