@@ -22,8 +22,14 @@ import { MdOutlineCancel } from "react-icons/md";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { BsDashLg } from "react-icons/bs";
 import { SiNextdotjs } from "react-icons/si";
+import { FaLinkedin, FaGithub, FaStripe } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
 
 const ReactIcons = {
+  stripe: <FaStripe />,
+  mail: <IoMail />,
+  github: <FaGithub />,
+  linkedIn: <FaLinkedin />,
   nextjs: <SiNextdotjs />,
   dash: <BsDashLg />,
   arrowRight: <FaArrowRightLong />,

@@ -16,8 +16,10 @@ import udemy from "./udemy.png";
 import reactQuery from "./react-query.png";
 import nextAuth from "./next-auth.png";
 import axios from "./axios.png";
+import profileLogo from "./aminfo.png";
 
 const CustomImages = {
+  profileLogo,
   axios,
   nextAuth,
   udemy,

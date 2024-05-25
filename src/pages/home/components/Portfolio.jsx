@@ -8,16 +8,13 @@ const Portfolio = () => {
 
   const handleMouseEnter = (i) => {
     setIndex(i);
-    setTimeout(() => {
-      setToggleShadow(true);
-    }, 50); // Introduce a small delay
+
+    setToggleShadow(true);
   };
 
   const handleMouseLeave = () => {
-    setTimeout(() => {
-      setToggleShadow(false);
-      setIndex(null);
-    }, 50); // Introduce a small delay
+    setToggleShadow(false);
+    setIndex(null);
   };
 
   const handleMouseEnterPortfolio = (i) => {
@@ -74,14 +71,10 @@ const Portfolio = () => {
                 <p className="portfolio_category">({category})</p>
               </div>
 
-              {/* <div className="flex gap-2 text-sm mt-4 text-gray-600">
-                <p className="text-nowrap">Tech Used : </p>
-                <p>{tech}</p>
-              </div> */}
               <div
                 className={`${
                   toggleShadow && i === index && "gradient_link_shadow"
-                } mx-auto rounded-lg px-6 py-2 w-max cursor-pointer gradient_link text-white`}
+                } mx-auto rounded-lg px-6 py-2 w-max cursor-pointer gradient_link text-white duration-200`}
                 onMouseEnter={() => handleMouseEnter(i)}
                 onMouseLeave={handleMouseLeave}
               >

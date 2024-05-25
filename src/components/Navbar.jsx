@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import ReactIcons from "../assets/icons";
+import CustomImages from "../assets/images";
 
 const navLinkList = [
   { name: "HOME", href: "/" },
@@ -49,7 +50,15 @@ const Navbar = ({ handleBlur }) => {
   return (
     <nav className="relative w-full h-full">
       <nav className="px-32 sm_lap:px-24 tablet:px-16  mobile:px-10 w-full h-full flex justify-between items-center text-black">
-        <div>amInfo</div>
+        <Link to={`/`}>
+          <div className="w-32">
+            <img
+              src={CustomImages.profileLogo}
+              alt="Profile Logo"
+              className="w-full object-cover"
+            />
+          </div>
+        </Link>
 
         {showHamburger ? (
           <div className="cursor-pointer" onClick={handleHamburger}>
