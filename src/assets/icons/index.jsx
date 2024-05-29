@@ -24,8 +24,10 @@ import { BsDashLg } from "react-icons/bs";
 import { SiNextdotjs } from "react-icons/si";
 import { FaLinkedin, FaGithub, FaStripe } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
+import { IoIosArrowUp } from "react-icons/io";
 
 const ReactIcons = {
+  upArrow: <IoIosArrowUp />,
   stripe: <FaStripe />,
   mail: <IoMail />,
   github: <FaGithub />,

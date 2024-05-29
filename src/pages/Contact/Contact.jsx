@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import ReactIcons from "../../assets/icons";
 import MapComponent from "../../lib/MapComponent";
 
@@ -5,6 +6,11 @@ const location = { latitude: 25.266497, longitude: 82.989469 };
 const EMAIL = "amitprofessional007@gmail.com";
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = "Resume | Contact";
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="flex justify-between p-10">
       <div className="flex-1 self-end gap-1">

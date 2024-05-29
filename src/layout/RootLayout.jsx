@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useState } from "react";
+import ScrollToTop from "../lib/ScrollToTop";
 
 const RootLayout = () => {
   const [blurScreen, setBlurScreen] = useState(false);
@@ -27,6 +28,7 @@ const RootLayout = () => {
           <Footer />
         </div>
       </div>
+      <ScrollToTop />
     </div>
   );
 };

@@ -1,14 +1,37 @@
 import PortfolioData from "../../data/PortfolioData";
 import ReactIcons from "../../assets/icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+
+const NAVBAR_HEIGHT = 100; // Adjust this value to your navbar height
 
 const LatestPortfolio = () => {
   const [index, setIndex] = useState(null);
   const [toggleShadow, setToggleShadow] = useState(false);
 
+  const location = useLocation();
+  console.log("location", location);
+
+  useEffect(() => {
+    if (location.state && location.state.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+
+      if (element) {
+        setTimeout(() => {
+          const elementPosition =
+            element.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - NAVBAR_HEIGHT;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "instant",
+          });
+        }, 0); // Ensure the scroll happens after the component has mounted
+      }
+    }
+  }, [location.state]);
+
   const handleMouseEnter = (i) => {
     setIndex(i);
-
     setToggleShadow(true);
   };
 
@@ -36,7 +59,11 @@ const LatestPortfolio = () => {
 
         return (
           <>
-            <div key={i} className="flex gap-14 mobile:flex-col mobile:gap-0 ">
+            <div
+              key={i}
+              className="flex gap-14 mobile:flex-col mobile:gap-0"
+              id={title}
+            >
               <div className="w-2/5 mobile:w-full space-y-10">
                 <div className="w-full">
                   <img src={image} alt={title} />

@@ -7,6 +7,7 @@ import Service from "./components/Service";
 const Home = () => {
   useEffect(() => {
     document.title = "Resume | Home";
+    window.scrollTo(0, 0);
   }, []);
 
   return (

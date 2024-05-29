@@ -1,8 +1,17 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useMemo, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const PersonalDetail = () => {
   const [showShadow, setShowShadow] = useState(false);
+
+  const { pathname } = useLocation();
+
+  const isInAboutPage = useMemo(() => {
+    if (pathname === "/about") {
+      return true;
+    }
+    return false;
+  }, [pathname]);
 
   return (
     <section className="w-full h-full flex mobile:flex-col mobile:gap-10 justify-between  items-center ">
@@ -25,6 +34,13 @@ const PersonalDetail = () => {
           } gradient_link px-6 py-[10px] text-white tracking-wider mt-12 mb-6 uppercase text-sm transition-all duration-300`}
           onMouseEnter={() => setShowShadow(true)}
           onMouseLeave={() => setShowShadow(false)}
+          onClick={() =>
+            isInAboutPage &&
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            })
+          }
         >
           <Link to={`/about`}>View full detail</Link>
         </button>
