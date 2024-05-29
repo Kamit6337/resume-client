@@ -1,8 +1,13 @@
-# React + Vite
+# aminfo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p>This is my portfolio web app build in React JS where I show all my details, qualifications, skills and also my projects to get an idea about me</p>
 
-Currently, two official plugins are available:
+<a href="https://aminfo.in"><u>Live Website</u></p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h1>Teach used : </h1>
+<ul>
+<li>React JS</li>
+<li>React Icons - <i>show different icons like for profile, search etc</i></li>
+<li>React Leaflet - <i>show location based on latitude and longitude on the map</i></li>
+<li>React Flow - <i>implement flow chart like features and diagrams using pre-built components</i></li>
+</ul>
