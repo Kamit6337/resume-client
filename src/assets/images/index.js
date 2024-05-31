@@ -17,8 +17,10 @@ import reactQuery from "./react-query.png";
 import nextAuth from "./next-auth.png";
 import axios from "./axios.png";
 import profileLogo from "./aminfo.png";
+import ssr from "./ssr.png";
 
 const CustomImages = {
+  ssr,
   profileLogo,
   axios,
   nextAuth,

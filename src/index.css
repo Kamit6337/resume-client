@@ -55,7 +55,7 @@
   }
 
   .service_option {
-    @apply w-1/2   py-2 font-semibold tracking-wider cursor-pointer text-center hover:bg-my_hover_header hover:text-hover_link;
+    @apply w-1/2  py-2 font-semibold tracking-wider cursor-pointer text-center hover:text-hover_link;
   }
 
   .mern_stack_option {
