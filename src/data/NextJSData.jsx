@@ -53,8 +53,7 @@ const NextJSData = [
   },
   {
     title: "Server Actions",
-    icon: ReactIcons.seo,
-
+    icon: ReactIcons.nextjs,
     points: [
       "a feature that allows developers to perform certain tasks or actions directly on the server, typically during the server-side rendering process or during API requests",
       "used to fetch data from databases, third-party APIs, or other external sources. All these happen in server, enhanced security of sensitive information",

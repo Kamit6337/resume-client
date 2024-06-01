@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import CustomImages from "../../../assets/images";
 
 const PersonalDetail = () => {
   const [showShadow, setShowShadow] = useState(false);
@@ -15,8 +16,12 @@ const PersonalDetail = () => {
 
   return (
     <section className="w-full h-full flex mobile:flex-col mobile:gap-10 justify-between  items-center ">
-      <div className="basis-96 h-96 mobile:h-0 mobile:w-full tablet:basis-72 tablet:h-72 shadow-xl">
-        myImage
+      <div className="basis-96 h-96 mobile:h-0 mobile:w-full tablet:basis-72 tablet:h-72 shadow-xl flex justify-center">
+        <img
+          src={CustomImages.profile}
+          alt="profile"
+          className="h-full object-cover"
+        />
       </div>
       <main className="basis-1/2 uppercase mt-10 tablet:mt-6">
         <p className="tracking-wide text-sm">About me</p>

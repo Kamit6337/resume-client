@@ -51,7 +51,7 @@
   }
 
   .service_point {
-    @apply mobile:text-xs font-thin text-gray-500 tracking-wide;
+    @apply mobile:text-xs font-thin text-gray-500 tracking-wide mobile:tracking-wider;
   }
 
   .service_option {

@@ -2,8 +2,8 @@ import NextJSData from "../data/NextJSData";
 
 const NextJSInfo = () => {
   return (
-    <section className=" flex justify-center ">
-      <main className="w-3/4 border border-gray-400 rounded-lg p-8 my-20 mobile:p-4">
+    <section className="flex justify-center">
+      <main className="w-3/4 sm_lap:w-[95%] border border-gray-400 rounded-lg p-8 my-20 mobile:p-4">
         {NextJSData.map((data, i, arr) => {
           const { title, points, icon } = data;
 
@@ -11,12 +11,12 @@ const NextJSInfo = () => {
 
           return (
             <>
-              <div key={i}>
+              <div key={i} className="space-y-3">
                 <div className="flex items-center">
                   <p className="service_icon">{icon}</p>
                   <p className="service_title">{title}</p>
                 </div>
-                <ul className="list-disc px-16 mobile:px-8 service_point mt-2">
+                <ul className="list-disc px-16 mobile:px-8 service_point mt-2 mobile:space-y-1">
                   {points.map((point, i) => {
                     return <li key={i}>{point}</li>;
                   })}

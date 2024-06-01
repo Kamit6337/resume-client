@@ -10,10 +10,11 @@ const PortfolioData = [
     github: "https://github.com/Kamit6337/notable-client",
     preview: "https://notable-client.onrender.com/",
     details: [
-      "here you can make notes and create notebook to categorise",
-      "save notes with text, images and file in it",
-      "you can also download the notes in pdf",
-      "enabling text-editor to highlight or cutomise your text",
+      "here you can write your memories, study material, diaries and many more things",
+      "login with email or password or login with much more trustworthy, Google OAuth2.0",
+      "create notebook for each of the of category to segregate the topic",
+      "you can attach tag to each notes which help in filtering of notes",
+      "enabling text-editor to highlight or cutomise your text to make your notes much more readable and understandable to you",
     ],
     icons: [
       {
@@ -38,10 +39,6 @@ const PortfolioData = [
       {
         icon: ReactIcons.tailwind,
         name: "Tailwind CSS",
-      },
-      {
-        icon: ReactIcons.socketIO,
-        name: "Socket IO",
       },
       {
         icon: ReactIcons.nodejs,
@@ -80,9 +77,12 @@ const PortfolioData = [
     preview: "https://vwflex.vercel.app",
     details: [
       "It is like Netflix, Amazon Prime, Hotstar where a list of different categories/genres of movies/tv shows are provided",
-      "watch whichever like, whenever have free time",
-      "gives recommendation based on movie/tv shows which is currently watching",
-      "create own watchlist to watch later",
+      "watch whichever you like, whenever you have free time",
+      "provide latest movies and tv shows and also the trending movies and tv shows in the app",
+      "search famous personality of entertainment industry around the world, you will get their biography and movies and tv shows collection",
+      "login with email or password or login with much more trustworthy, Google OAuth2.0",
+      "gives recommendation based on movie/tv shows which you are currently watching",
+      "create your own watchlist of movie and tv shows to watch later",
       "get access after paying subscription fee for a year, cancel anytime",
     ],
     icons: [
@@ -149,12 +149,15 @@ const PortfolioData = [
     github: "https://github.com/Kamit6337/commercify-client",
     preview: "https://commercify-client.onrender.com/",
     details: [
-      "like Amazon, Flipkart or any other e-Commerce platform, see a collections of products",
-      "filter products based on categories, rating, gender",
-      "sort product list based on rating or price",
-      "payment mechanism using RazorPay which accept Debit and Credit card, Net Banking and UPI Payment",
-      "create wtachlist of products to buy them later",
-      "admin can add new product, update existing product and delete product from Frontend page",
+      "like Amazon, Flipkart or any other e-Commerce platform, see a collections of products of different categories",
+      "login using mobile OTP which help in sending relevant messages to mobile",
+      "filter products based on categories, pricing",
+      "sort product list based on price",
+      "payment mechanism using Stripe API which accept payment through Debit and Credit card in local currency",
+      "create watchlist of products to buy them later",
+      "cancel the product before it gets delievered",
+      "return the product after it was deleievered",
+      "rate the delievered product out of 5 stars along with title and comment",
     ],
     icons: [
       {
@@ -222,72 +225,72 @@ const PortfolioData = [
       },
     ],
   },
-  {
-    title: "OnClick",
-    category: "Chat Application",
-    tech: "React JS, Socket.io, Redux, React-Query, Tailwind-CSS, Node JS, Express JS, MongoDB, Mongoose, Passport.js, JsonWebToken",
-    image: CustomImages.chat,
-    github: "https://github.com/Kamit6337/onClick-client",
-    preview: "https://notable-client.onrender.com/",
-    details: [
-      "where you can chat with individual or form a group to chat",
-      "send messages, images, files and videos while chatting",
-      "custom and OAuth login/signup functionality",
-    ],
-    icons: [
-      {
-        icon: ReactIcons.reactjs,
-        name: "React JS",
-      },
-      {
-        icon: ReactIcons.socketIO,
-        name: "Socket IO",
-      },
-      {
-        icon: ReactIcons.redux,
-        name: "Redux",
-      },
-      {
-        icon: (
-          <img
-            src={CustomImages.reactQuery}
-            className="w-10 sm_lap:w-8 tablet:w-6"
-          />
-        ),
-        name: "React-Query",
-      },
-      {
-        icon: ReactIcons.tailwind,
-        name: "Tailwind CSS",
-      },
-      {
-        icon: ReactIcons.nodejs,
-        name: "Node JS",
-      },
-      {
-        icon: ReactIcons.express,
-        name: "Express JS",
-      },
-      {
-        icon: ReactIcons.mongodb,
-        name: "MongoDB",
-      },
-      {
-        icon: (
-          <img
-            src={CustomImages.mongoose}
-            alt="mongoose"
-            className="w-20 sm_lap:w-16 target:w-12"
-          />
-        ),
-        name: "Mongoose",
-      },
-      {
-        icon: ReactIcons.jsonwebtoken,
-        name: "JWT",
-      },
-    ],
-  },
+  // {
+  //   title: "OnClick",
+  //   category: "Chat Application",
+  //   tech: "React JS, Socket.io, Redux, React-Query, Tailwind-CSS, Node JS, Express JS, MongoDB, Mongoose, Passport.js, JsonWebToken",
+  //   image: CustomImages.chat,
+  //   github: "https://github.com/Kamit6337/onClick-client",
+  //   preview: "https://notable-client.onrender.com/",
+  //   details: [
+  //     "where you can chat with individual or form a group to chat",
+  //     "send messages, images, files and videos while chatting",
+  //     "custom and OAuth login/signup functionality",
+  //   ],
+  //   icons: [
+  //     {
+  //       icon: ReactIcons.reactjs,
+  //       name: "React JS",
+  //     },
+  //     {
+  //       icon: ReactIcons.socketIO,
+  //       name: "Socket IO",
+  //     },
+  //     {
+  //       icon: ReactIcons.redux,
+  //       name: "Redux",
+  //     },
+  //     {
+  //       icon: (
+  //         <img
+  //           src={CustomImages.reactQuery}
+  //           className="w-10 sm_lap:w-8 tablet:w-6"
+  //         />
+  //       ),
+  //       name: "React-Query",
+  //     },
+  //     {
+  //       icon: ReactIcons.tailwind,
+  //       name: "Tailwind CSS",
+  //     },
+  //     {
+  //       icon: ReactIcons.nodejs,
+  //       name: "Node JS",
+  //     },
+  //     {
+  //       icon: ReactIcons.express,
+  //       name: "Express JS",
+  //     },
+  //     {
+  //       icon: ReactIcons.mongodb,
+  //       name: "MongoDB",
+  //     },
+  //     {
+  //       icon: (
+  //         <img
+  //           src={CustomImages.mongoose}
+  //           alt="mongoose"
+  //           className="w-20 sm_lap:w-16 target:w-12"
+  //         />
+  //       ),
+  //       name: "Mongoose",
+  //     },
+  //     {
+  //       icon: ReactIcons.jsonwebtoken,
+  //       name: "JWT",
+  //     },
+  //   ],
+  // },
 ];
 
 export default PortfolioData;

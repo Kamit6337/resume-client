@@ -61,7 +61,7 @@ const LatestPortfolio = () => {
           <>
             <div
               key={i}
-              className="flex gap-14 mobile:flex-col mobile:gap-0"
+              className="flex gap-14 mobile:flex-col mobile:gap-10"
               id={title}
             >
               <div className="w-2/5 mobile:w-full space-y-10">

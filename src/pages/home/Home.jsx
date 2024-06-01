@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="bg-my_bg_10 px-32 sm_lap:px-24 tablet:px-16 mobile:px-8 py-48 tablet:py-36 mobile:py-24">
+      <div className="bg-my_bg_10 px-32 sm_lap:px-24 tablet:px-16 mobile:px-8 py-36 mobile:py-24">
         <Hero />
       </div>
       <div

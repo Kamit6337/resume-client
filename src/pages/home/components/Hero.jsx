@@ -1,7 +1,9 @@
+import CustomImages from "../../../assets/images/index";
+
 const Hero = () => {
   return (
-    <section className="w-full flex mobile:flex-col  justify-between tablet:gap-6 items-center">
-      <main className="uppercase basis-1/2">
+    <section className="w-full flex mobile:flex-col mobile:gap-20  justify-center tablet:gap-6 items-center">
+      <main className="uppercase">
         <p>this is me</p>
         <p className="text-6xl tablet:text-5xl font-bold tracking-wider my-6">
           Amit Kumar
@@ -11,8 +13,13 @@ const Hero = () => {
           peoples to make a big thing.
         </p>
       </main>
-      <div className="flex-1 mobile:w-full mobile:basis-72 mobile:flex mobile:justify-center mobile:items-center ">
-        myImage
+
+      <div className="w-[450px] shadow-xl flex justify-center">
+        <img
+          src={CustomImages.heroProfile}
+          alt="profile"
+          className="w-full object-cover"
+        />
       </div>
     </section>
   );

@@ -18,8 +18,12 @@ import nextAuth from "./next-auth.png";
 import axios from "./axios.png";
 import profileLogo from "./aminfo.png";
 import ssr from "./ssr.png";
+import profile from "./profile3.png";
+import heroProfile from "./profile4.png";
 
 const CustomImages = {
+  heroProfile,
+  profile,
   ssr,
   profileLogo,
   axios,
