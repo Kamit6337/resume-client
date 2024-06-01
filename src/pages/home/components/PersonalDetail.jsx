@@ -15,15 +15,15 @@ const PersonalDetail = () => {
   }, [pathname]);
 
   return (
-    <section className="w-full h-full flex mobile:flex-col mobile:gap-10 justify-between  items-center ">
-      <div className="basis-96 h-96 mobile:h-0 mobile:w-full tablet:basis-72 tablet:h-72 shadow-xl flex justify-center">
+    <section className="w-full h-full flex gap-20 sm_lap:gap-10 tablet:gap-5 mobile:flex-col mobile:gap-10 justify-center mobile:items-center">
+      <div className="w-96 h-96 tablet:w-72 tablet:h-72 shadow-xl flex justify-center">
         <img
           src={CustomImages.profile}
           alt="profile"
           className="h-full object-cover"
         />
       </div>
-      <main className="basis-1/2 uppercase mt-10 tablet:mt-6">
+      <main className="w-96 uppercase mt-10 tablet:mt-6">
         <p className="tracking-wide text-sm">About me</p>
         <p className="section_header mt-10 mb-6 tablet:mt-6 tablet:mb-2">
           Personal Details
