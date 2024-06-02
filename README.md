@@ -2,7 +2,7 @@
 
 <p>This is my portfolio web app build in React JS where I show all my details, qualifications, skills and also my projects to get an idea about me</p>
 
-<a href="https://aminfo.in"><u>Live Website</u></p>
+<a href="https://aminfo.onrender.com"><u>Live Website</u></p>
 
 <h1>Teach used : </h1>
 <ul>
