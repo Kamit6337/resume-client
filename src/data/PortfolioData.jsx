@@ -149,15 +149,15 @@ const PortfolioData = [
     github: "https://github.com/Kamit6337/commercify-client",
     preview: "https://commercify-client.onrender.com/",
     details: [
-      "like Amazon, Flipkart or any other e-Commerce platform, see a collections of products of different categories",
-      "login using mobile OTP which help in sending relevant messages to mobile",
+      "like Amazon, Flipkart or any other E-Commerce platform, see a collections of products of different categories",
+      "login using mobile OTP which is gaining popularity now a days",
       "filter products based on categories, pricing",
       "sort product list based on price",
       "payment mechanism using Stripe API which accept payment through Debit and Credit card in local currency",
-      "create watchlist of products to buy them later",
-      "cancel the product before it gets delievered",
-      "return the product after it was deleievered",
-      "rate the delievered product out of 5 stars along with title and comment",
+      "create wishlist of products to buy them later",
+      "cancel the product before it gets delivered",
+      "return the product after it was delivered",
+      "rate the delivered product out of 5 stars along with title and comment",
     ],
     icons: [
       {
