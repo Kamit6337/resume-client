@@ -3,18 +3,23 @@ import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import ReactIcons from "../assets/icons";
 import CustomImages from "../assets/images";
+import { navLinkList } from "../../constants";
+import { Box, Drawer, List } from "@mui/material";
 
-const navLinkList = [
-  { name: "HOME", href: "/" },
-  { name: "ABOUT", href: "/about" },
-  // { name: "SERVICE", href: "/service" },
-  { name: "PORTFOLIO", href: "/portfolio" },
-  { name: "CONTACT", href: "/contact" },
-];
-
-const Navbar = ({ handleBlur }) => {
+const Navbar = () => {
   const [showHamburger, setShowHamburger] = useState(false);
-  const [showSideNav, setShowSideNav] = useState(false);
+  const [state, setState] = useState(false);
+
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setState(open);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -37,16 +42,6 @@ const Navbar = ({ handleBlur }) => {
     };
   }, []);
 
-  const handleHamburger = () => {
-    handleBlur(true);
-    setShowSideNav(true);
-  };
-
-  const handleCancel = () => {
-    setShowSideNav(false);
-    handleBlur(false);
-  };
-
   return (
     <nav className="relative w-full h-full">
       <nav className="px-32 sm_lap:px-24 tablet:px-16  mobile:px-10 w-full h-full flex justify-between items-center text-black">
@@ -61,7 +56,7 @@ const Navbar = ({ handleBlur }) => {
         </Link>
 
         {showHamburger ? (
-          <div className="cursor-pointer" onClick={handleHamburger}>
+          <div className="cursor-pointer" onClick={toggleDrawer(true)}>
             {ReactIcons.hamburger}
           </div>
         ) : (
@@ -87,40 +82,42 @@ const Navbar = ({ handleBlur }) => {
       </nav>
 
       {/* MARK: SIDENAVBAR */}
-      <div
-        className={`absolute z-10 top-0 left-0 flex -translate-x-full transition-all duration-500
-        ${showSideNav && "translate-x-0 "}
-        `}
+      <Drawer
+        anchor={"right"}
+        open={state}
+        onClose={toggleDrawer(false)}
+        className=""
       >
-        <div
-          className="bg-black h-screen pt-20  flex flex-col items-center gap-8"
-          style={{ width: `${window.innerWidth / 2}px` }}
+        <Box
+          sx={{ width: 300 }}
+          role="presentation"
+          onClick={toggleDrawer(false)}
+          onKeyDown={toggleDrawer(false)}
+          className="bg-my_footer h-screen pt-20"
         >
-          {navLinkList.map((obj, i) => {
-            const { name, href } = obj;
+          <List className="flex flex-col items-center gap-8">
+            {navLinkList.map((obj, i) => {
+              const { name, href } = obj;
 
-            return (
-              <div
-                key={i}
-                className="tracking-wider hover:text-hover_link text-white text-xs"
-              >
-                <NavLink
-                  to={href}
-                  onClick={handleCancel}
-                  className={({ isActive }) =>
-                    isActive ? "text-hover_link" : ""
-                  }
+              return (
+                <div
+                  key={i}
+                  className="tracking-wider hover:text-hover_link text-white text-xs"
                 >
-                  {name}
-                </NavLink>
-              </div>
-            );
-          })}
-        </div>
-        <div onClick={handleCancel} className="cursor-pointer text-3xl">
-          {ReactIcons.cancel}
-        </div>
-      </div>
+                  <NavLink
+                    to={href}
+                    className={({ isActive }) =>
+                      isActive ? "text-hover_link" : ""
+                    }
+                  >
+                    {name}
+                  </NavLink>
+                </div>
+              );
+            })}
+          </List>
+        </Box>
+      </Drawer>
     </nav>
   );
 };

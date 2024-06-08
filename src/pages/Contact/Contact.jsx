@@ -33,7 +33,8 @@ const Contact = () => {
   return (
     <section>
       <Header to={`contact`} />
-      <div className="flex justify-between p-10 tablet:py-20 tablet:flex-col tablet:gap-10">
+
+      <div className="flex justify-between p-10 tablet:py-20 mobile:px-5 tablet:flex-col tablet:gap-10">
         <div className="flex-1 self-end gap-1 tablet:self-start">
           <p className="underline underline-offset-4 mb-4">Contact</p>
           <p className="text-lg text-gray-600">Amit Kumar</p>
@@ -59,7 +60,7 @@ const Contact = () => {
             })}
           </div>
         </div>
-        <div className="h-[500px] w-[60%] tablet:w-full">
+        <div className="h-[500px] w-[60%] tablet:w-full z-0">
           <MapComponent
             latitude={location.latitude}
             longitude={location.longitude}

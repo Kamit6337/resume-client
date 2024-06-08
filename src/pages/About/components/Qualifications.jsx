@@ -25,14 +25,14 @@ const Qualifications = () => {
       }
     };
 
+    handleWindowResize();
+
     window.addEventListener("resize", handleWindowResize);
 
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
-
-  console.log("mobile view", mobileView);
 
   if (!mobileView) {
     return (
@@ -246,10 +246,10 @@ const Qualifications = () => {
   return (
     <div className="w-full">
       <p className="section_header mb-28 text-center ">My Qualifications</p>
-      <div className="w-full flex flex-col gap-8 ">
+      <div className="w-full flex flex-col items-center gap-8 ">
         {/* MARK: 1ST DOT DIV */}
         <div
-          className={`self-start shadow-xl  pt-2 pb-8 px-2 flex flex-col items-center mobile:w-full`}
+          className={`shadow-xl  pt-2 pb-8 px-2 flex flex-col items-center mobile:w-full`}
           style={{
             width: `${width || "384"}px`,
             marginLeft: `${margin || "112"}px`,
@@ -273,7 +273,7 @@ const Qualifications = () => {
 
         {/* MARK: 2ND DOT DIV */}
         <div
-          className={`self-end  shadow-xl  pt-2 pb-8 px-2 flex flex-col items-center mobile:w-full`}
+          className={`shadow-xl  pt-2 pb-8 px-2 flex flex-col items-center mobile:w-full`}
           style={{
             width: `${width || "384"}px`,
             marginRight: `${margin || "112"}px`,
@@ -299,7 +299,7 @@ const Qualifications = () => {
         {/* MARK: 3RD DOT DIV */}
 
         <div
-          className={`self-start   shadow-xl  pt-2 pb-8 px-2 flex flex-col items-center mobile:w-full`}
+          className={`shadow-xl  pt-2 pb-8 px-2 flex flex-col items-center mobile:w-full`}
           style={{
             width: `${width || "384"}px`,
             marginLeft: `${margin || "112"}px`,
@@ -339,7 +339,7 @@ const Qualifications = () => {
         {/* MARK: 4TH DOT DIV */}
 
         <div
-          className={`self-end   shadow-xl  pt-2 pb-8 px-2  flex flex-col items-center mobile:w-full`}
+          className={`shadow-xl  pt-2 pb-8 px-2  flex flex-col items-center mobile:w-full`}
           style={{
             width: `${width || "384"}px`,
             marginRight: `${margin || "112"}px`,
@@ -378,7 +378,7 @@ const Qualifications = () => {
         {/* MARK: 5TH DOT DIV */}
 
         <div
-          className={`self-start shadow-xl  pt-2 pb-8 px-2  flex flex-col items-center mobile:w-full`}
+          className={`shadow-xl  pt-2 pb-8 px-2  flex flex-col items-center mobile:w-full`}
           style={{
             width: `${width || "384"}px`,
             marginLeft: `${margin || "112"}px`,
