@@ -24,7 +24,7 @@ import bhu from "./details/bhu.png";
 import udemy from "./details/udemy.png";
 
 import profileLogo from "./aminfo.png";
-import profile from "./profile2-modified.png";
+import profile from "./profile1.png";
 import heroProfile from "./profile4.png";
 import google from "./google.png";
 import hashing from "./hashing.png";
