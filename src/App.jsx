@@ -1,12 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import "./App.css";
-import Router from "./routes/Router";
+import { useEffect } from "react";
 
 function App() {
-  return (
-    <>
-      <Router />
-    </>
-  );
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.location.href = "https://aminfo.vercel.app";
+  }, [navigate]);
+
+  return null;
 }
 
 export default App;
